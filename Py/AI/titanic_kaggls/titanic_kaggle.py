@@ -61,4 +61,4 @@ xtest = pd.DataFrame({'Pclass':test['Pclass'], 'Sex':test['Sex'], 'Age':test['Ag
 
 print(model.predict(xtest))
 
-
+#これ将来的にどうする?
