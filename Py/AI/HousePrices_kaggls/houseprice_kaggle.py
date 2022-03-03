@@ -17,8 +17,8 @@ import seaborn as sns
 pd.set_option('display.max_columns', 100)
 
 #データの読み込み
-train_df = pd.read_csv('/home/g0n/ドキュメント/Programing_git/Py/AI/HousePrices_kaggls/train1.csv',index_col=0)
-test_df = pd.read_csv("/home/g0n/ドキュメント/Programing_git/Py/AI/HousePrices_kaggls/test1.csv")
+train_df = pd.read_csv('/home/g0n/Documents/GitHub/Programing/Py/AI/HousePrices_kaggls/train1.csv',index_col=0)
+test_df = pd.read_csv("/home/g0n/Documents/GitHub/Programing/Py/AI/HousePrices_kaggls/test1.csv")
 
 # 売却価格の概要をみてみる
 print(train_df["SalePrice"].describe())
@@ -143,7 +143,7 @@ sns.histplot(train_df['SalePrice'])
 print(f"歪度: {round(pd.Series(train_df['SalePrice']).skew(),4)}" )
 print(f"尖度: {round(pd.Series(train_df['SalePrice']).kurt(),4)}" )
 
-submission_df = pd.read_csv('/home/g0n/ドキュメント/Programing_git/Py/AI/HousePrices_kaggls/sample_submission.csv')
+submission_df = pd.read_csv('/home/g0n/Documents/GitHub/Programing/Py/AI/HousePrices_kaggls/sample_submission.csv')
 
 submission_df['SalePrice'] = pred
 
